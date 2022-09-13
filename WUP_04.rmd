@@ -60,7 +60,7 @@ Lt high school  is different
 favstats(WORDSUM~DEGREE,data=wup04data)
 ```
 
-
+We look at the median and it shows that LT high school is different from all of then but, junior college and Bachelor are similar 
 
 ## Inferential Results
 
