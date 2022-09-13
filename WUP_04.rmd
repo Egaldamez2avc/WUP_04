@@ -71,6 +71,8 @@ model1 <- aov(WORDSUM~DEGREE,data=wup04data)
 summary.aov(model1)
 ```
 
+The pries 0.000236 is the chance that they will all be similar and they wont be because of how low the percentage is 
+
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
