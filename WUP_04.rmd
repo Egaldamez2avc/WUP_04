@@ -23,6 +23,8 @@ mutate(across(where(is.character), as.factor))
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
 
+
+
 The data is in the file GSScsv.csv and came from the 2018 General Social Survey.  The question to answer is to resolve this hypothesis.  
 $H_0$ There is no difference between the average score on the WORDSUM test and level of schooling DEGREE  
 $H_a$ There is a significant difference in average score on the WORDSUM test between at least two levels of DEGREE  
@@ -31,7 +33,7 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method.!-->
 
-
+We will be using a box plot and favstats and to analyze our information. we use WORDSUM the integer and DEGREE the factor. We inputed the variables with a graphical and numerical data.    
 
 # Results
 
@@ -48,7 +50,7 @@ $H_a$ There is a significant difference in average score on the WORDSUM test bet
 boxplot(WORDSUM~DEGREE,data=wup04data)
 ```
 
-Lt high school  is different 
+Lt high school  is different from the rest of the data by looking at were it is on the chart. 
 
 ### Numerical Descriptive Results
 
@@ -72,7 +74,17 @@ summary.aov(model1)
 ```
 
 The pries 0.000236 is the chance that they will all be similar and they wont be because of how low the percentage is 
-
-# Discussion and Conclusion
-
+```{r}
+par(mar = c(3, 8.7, 2, 2))
+plot(TukeyHSD(model1,conf.level = 0.95),las=2)
+```
+ 
+ 
+ There is a 95% chance that they will be similar except for LT high school to graduate and high school to graduate those are different as seen on the chart. 
+ 
+ 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+
+
+In conclusion we found that LT high school is the most different from all the levels of education. most likely students will not have a high likely of graduating for LT high school with a mean of 7.750000 which is the lowest of the other schools. 
